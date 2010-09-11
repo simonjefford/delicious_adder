@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'bundler/setup'
+require File.dirname(__FILE__) + '/../lib/lookup'
+require 'thin'
+ 
+rackup_file = "#{File.dirname(__FILE__)}/../lib/config.ru"
+ 
+argv = ARGV
+argv << ["-R", rackup_file] unless ARGV.include?("-R")
+argv << ["-p", "9292"] unless ARGV.include?("-p")
+argv << ["-e", "production"] unless ARGV.include?("-e")
+puts argv.inspect
+Thin::Runner.new(argv.flatten).run!
+

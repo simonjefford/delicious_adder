@@ -1,0 +1,27 @@
+PATH
+  remote: .
+  specs:
+    delicious_adder (0.1.0)
+      sinatra
+      thin
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    daemons (1.1.0)
+    eventmachine (0.12.10)
+    rack (1.2.1)
+    sinatra (1.0)
+      rack (>= 1.0)
+    thin (1.2.7)
+      daemons (>= 1.0.9)
+      eventmachine (>= 0.12.6)
+      rack (>= 1.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  delicious_adder!
+  sinatra
+  thin

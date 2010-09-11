@@ -1,0 +1,32 @@
+= delicious_adder
+
+Provides a tiny web service so RedLaser (or a similar mobile app) can scan directly
+into Delicious Library.
+
+== Instructions for RedLaser on an iPhone.
+
+Visit http://redlaser.com/apps on your iPhone and fill in the following fields
+
+Name: Delicious Library Scanner
+
+URL: http://{your_host_name_or_ip}:9292/
+
+Param: barcode
+
+Run the following in a Terminal window:
+
+delicious_adder start
+
+== Note on Patches/Pull Requests
+ 
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+== Copyright
+
+Copyright (c) 2010 Simon Jefford. See LICENSE for details.
