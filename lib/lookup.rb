@@ -8,9 +8,7 @@ tell first document of application "Delicious Library 2"
 end tell
 CMDEND
     puts cmdline
-    #TODO - pipe this through osascript rather than save it to a file
-    open("script.txt", "w") { |io| io.write(cmdline) }
-    system "osascript script.txt"
+    open("|osascript -", "w") { |io| io.write(cmdline) }
     params[:barcode]
   end
 end
